@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class ArticleController {
-    @Autowired //spring boot가 미리 생성해놓은 객체를 가져다가 자동 연결
+    @Autowired //spring boot가 미리 생성해놓은 객체를 가져다가 자동 연결(의존성 주입(DI))
     private ArticleRepository articleRepository;
 
     @GetMapping("/articles/new")

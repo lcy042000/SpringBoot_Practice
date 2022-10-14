@@ -3,9 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="springbootFirst.springbootFirst.main" target="11" />
-      <module name="springbootFirst.springbootFirst.main~1" target="11" />
       <module name="springbootFirst.springbootFirst.test" target="11" />
-      <module name="springbootFirst.springbootFirst.test~1" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
