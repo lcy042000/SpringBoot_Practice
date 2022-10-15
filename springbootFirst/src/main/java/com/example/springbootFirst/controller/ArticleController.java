@@ -6,14 +6,26 @@ import com.example.springbootFirst.repository.ArticleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 @Controller
 @Slf4j
 public class ArticleController {
     @Autowired //spring boot가 미리 생성해놓은 객체를 가져다가 자동 연결(의존성 주입(DI))
     private ArticleRepository articleRepository;
+
+    @GetMapping("/articles")
+    public String index(Model model){
+        List<Article> articleEntityList = articleRepository.findAll();
+
+        model.addAttribute("articleList", articleEntityList);
+
+        return "articles/index";
+    }
 
     @GetMapping("/articles/new")
     public String newArticleForm(){ // /articles/new page rendering
