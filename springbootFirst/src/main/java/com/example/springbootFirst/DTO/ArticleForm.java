@@ -1,13 +1,13 @@
 package com.example.springbootFirst.DTO;
 
 import com.example.springbootFirst.entity.Article;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Getter
+@Setter
 public class ArticleForm {
     private Long id;
     private String title;
